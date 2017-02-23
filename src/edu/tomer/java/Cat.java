@@ -1,5 +1,6 @@
 package edu.tomer.java;
 
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 /**
@@ -8,11 +9,32 @@ import java.util.Scanner;
 public class Cat extends Animal {
     private String name;
 
+    //constructor
     public Cat() {
         super();
-
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter Name for your "  + getSpecies());
         name = scan.next();
+    }
+
+    //constructor
+    public Cat(LocalDateTime dateOfBirth, String name) {
+        super(dateOfBirth);
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        String out = super.toString();
+        out+="\nSpecies: " + getSpecies();
+        out+="\nName: " + name;
+
+        return out;
+    }
+
+    @Override
+    public void makeSound() {
+        super.makeSound();
+        System.out.println("Meow!");
     }
 }
