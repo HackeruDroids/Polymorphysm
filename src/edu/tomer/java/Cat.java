@@ -26,7 +26,6 @@ public class Cat extends Animal {
     @Override
     public String toString() {
         String out = super.toString();
-        out+="\nSpecies: " + getSpecies();
         out+="\nName: " + name;
 
         return out;
@@ -36,5 +35,9 @@ public class Cat extends Animal {
     public void makeSound() {
         super.makeSound();
         System.out.println("Meow!");
+    }
+
+    public void purr(){
+        System.out.println("purr");
     }
 }
