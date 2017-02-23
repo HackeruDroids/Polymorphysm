@@ -10,6 +10,10 @@ public class Animal {
     private final LocalDateTime dateOfBirth;
     private String species = getClass().getSimpleName();
 
+    public String getSpecies() {
+        return species;
+    }
+
     //constructor
     public Animal() {
         dateOfBirth = LocalDateTime.now();
